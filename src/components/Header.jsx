@@ -6,9 +6,9 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const { theme, setTheme } = useContext(ThemeContext);
-//   const toggleTheme = () => {
-//     setTheme(theme === "light" ? "dark" : "light");
-//   };
+  //   const toggleTheme = () => {
+  //     setTheme(theme === "light" ? "dark" : "light");
+  //   };
 
   useEffect(() => {
     const handleScroll = () => {

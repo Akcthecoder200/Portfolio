@@ -29,7 +29,7 @@ const Hero = () => {
             <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
               Hi, I'm{" "}
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                John Doe
+                Arvind Kumar
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -63,19 +63,19 @@ const Hero = () => {
 
           <div className="flex items-center justify-center space-x-6 mb-16 animate-fade-in-up animation-delay-600">
             <a
-              href="#"
+               href="https://github.com/Akcthecoder200"
               className="p-3 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors"
             >
               <Github className="w-6 h-6 text-gray-700 dark:text-gray-300" />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/arvindk2"
               className="p-3 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors"
             >
               <Linkedin className="w-6 h-6 text-gray-700 dark:text-gray-300" />
             </a>
             <a
-              href="#"
+              href="akchoudhary2411@gmail.com"
               className="p-3 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors"
             >
               <Mail className="w-6 h-6 text-gray-700 dark:text-gray-300" />
@@ -95,3 +95,5 @@ const Hero = () => {
 };
 
 export default Hero;
+
+

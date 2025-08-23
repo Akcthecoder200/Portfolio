@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, Instagram, Code, SquareCode } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -28,27 +28,28 @@ const Contact = () => {
     {
       icon: <Mail className="w-6 h-6" />,
       title: 'Email',
-      value: 'john.doe@email.com',
-      link: 'mailto:john.doe@email.com'
+      value: 'akchoudhary2411@gmail.com',
+      link: 'mailto:akchoudhary2411@gmail.com'
     },
     {
       icon: <Phone className="w-6 h-6" />,
       title: 'Phone',
-      value: '+1 (555) 123-4567',
-      link: 'tel:+15551234567'
+      value: '+91 7877200205',
+      link: 'tel:+917877200205'
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       title: 'Location',
-      value: 'San Francisco, CA',
+      value: 'Jalore, Rajasthan',
       link: '#'
     }
   ];
 
   const socialLinks = [
-    { icon: <Github className="w-6 h-6" />, name: 'GitHub', url: '#' },
-    { icon: <Linkedin className="w-6 h-6" />, name: 'LinkedIn', url: '#' },
-    { icon: <Twitter className="w-6 h-6" />, name: 'Twitter', url: '#' }
+    { icon: <Github className="w-6 h-6" />, name: 'GitHub', url: 'https://github.com/Akcthecoder200' },
+    { icon: <Linkedin className="w-6 h-6" />, name: 'LinkedIn', url: 'https://www.linkedin.com/in/arvindk2' },
+    { icon: <SquareCode className="w-6 h-6" />, name: 'Instagram', url: 'https://leetcode.com/u/cryptic_x/' },
+    { icon: <Instagram className="w-6 h-6" />, name: 'Code', url: 'https://www.instagram.com/arvind_k2' }
   ];
 
   return (

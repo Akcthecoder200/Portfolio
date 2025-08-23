@@ -4,53 +4,53 @@ import { ExternalLink, Github } from 'lucide-react';
 const Projects = () => {
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with React, Node.js, and Stripe integration. Features include user authentication, product management, and secure payments.',
+      title: 'CodeSync - Real-Time Code Editor',
+      description: 'A real-time collaborative code editor with instant code sync and multi-language execution. The platform includes a collaborative whiteboard and a robust room management.',
       image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800',
-      tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+      tags: ['React', 'Node.js', 'MongoDB', 'Socket.io', 'tldraw'],
       github: '#',
       live: '#'
     },
     {
-      title: 'Task Management App',
-      description: 'A collaborative project management tool built with React and Firebase. Real-time updates, drag-and-drop functionality, and team collaboration features.',
+      title: 'ConnectUs - Networking Platform',
+      description: 'A modern, AI-powered networking platform featuring intelligent job matching, secure blockchain payments, and comprehensive user profiles.',
       image: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800',
-      tags: ['React', 'Firebase', 'Tailwind CSS', 'JavaScript'],
+      tags: ['React', 'MongoDB', 'Node.js', 'ethers.js','GenAI'],
       github: '#',
       live: '#'
     },
     {
-      title: 'Weather Dashboard',
-      description: 'A beautiful weather application with location-based forecasts, interactive maps, and detailed weather analytics. Built with modern web technologies.',
+      title: 'Medibot - AI Health Assistant',
+      description: ' An AI healthcare assistant powered by GenAI and RAG. It provides accurate medical information from a custom knowledge base and supports daily conversations.',
       image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800',
-      tags: ['React', 'API Integration', 'Chart.js', 'CSS3'],
+      tags: ['Python', 'GenAI', 'LangChain', 'Pinecone'],
       github: '#',
       live: '#'
     },
-    {
-      title: 'Social Media Dashboard',
-      description: 'A comprehensive social media analytics dashboard with real-time data visualization, engagement metrics, and automated reporting features.',
-      image: 'https://images.pexels.com/photos/147413/twitter-facebook-together-exchange-of-information-147413.jpeg?auto=compress&cs=tinysrgb&w=800',
-      tags: ['Vue.js', 'D3.js', 'Python', 'PostgreSQL'],
-      github: '#',
-      live: '#'
-    },
-    {
-      title: 'Cryptocurrency Tracker',
-      description: 'Real-time cryptocurrency tracking application with portfolio management, price alerts, and detailed market analysis.',
-      image: 'https://images.pexels.com/photos/844124/pexels-photo-844124.jpeg?auto=compress&cs=tinysrgb&w=800',
-      tags: ['React', 'Redux', 'WebSocket', 'Chart.js'],
-      github: '#',
-      live: '#'
-    },
-    {
-      title: 'Recipe Sharing Platform',
-      description: 'A community-driven recipe sharing platform where users can upload, share, and discover new recipes with ratings and reviews.',
-      image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800',
-      tags: ['Next.js', 'Prisma', 'PostgreSQL', 'AWS'],
-      github: '#',
-      live: '#'
-    }
+    // {
+    //   title: 'Social Media Dashboard',
+    //   description: 'A comprehensive social media analytics dashboard with real-time data visualization, engagement metrics, and automated reporting features.',
+    //   image: 'https://images.pexels.com/photos/147413/twitter-facebook-together-exchange-of-information-147413.jpeg?auto=compress&cs=tinysrgb&w=800',
+    //   tags: ['Vue.js', 'D3.js', 'Python', 'PostgreSQL'],
+    //   github: '#',
+    //   live: '#'
+    // },
+    // {
+    //   title: 'Cryptocurrency Tracker',
+    //   description: 'Real-time cryptocurrency tracking application with portfolio management, price alerts, and detailed market analysis.',
+    //   image: 'https://images.pexels.com/photos/844124/pexels-photo-844124.jpeg?auto=compress&cs=tinysrgb&w=800',
+    //   tags: ['React', 'Redux', 'WebSocket', 'Chart.js'],
+    //   github: '#',
+    //   live: '#'
+    // },
+    // {
+    //   title: 'Recipe Sharing Platform',
+    //   description: 'A community-driven recipe sharing platform where users can upload, share, and discover new recipes with ratings and reviews.',
+    //   image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800',
+    //   tags: ['Next.js', 'Prisma', 'PostgreSQL', 'AWS'],
+    //   github: '#',
+    //   live: '#'
+    // }
   ];
 
   return (
@@ -120,7 +120,7 @@ const Projects = () => {
 
         <div className="text-center mt-12">
           <a 
-            href="#"
+            href="https://github.com/Akcthecoder200"
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
           >
             <Github className="w-5 h-5 mr-2" />
