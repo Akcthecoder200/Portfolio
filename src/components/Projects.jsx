@@ -11,8 +11,8 @@ const Projects = () => {
         "A real-time collaborative code editor with instant code sync and multi-language execution. The platform includes a collaborative whiteboard and a robust room management.",
       image: codesyncImg, // <-- Use local asset here
       tags: ["React", "Node.js", "MongoDB", "Socket.io", "tldraw"],
-      github: "#",
-      live: "#",
+      github: "https://github.com/Akcthecoder200/Realtime-Code-Editor",
+      live: "https://realtime-code-editor-inag.onrender.com/",
     },
     {
       title: "ConnectUs - Networking Platform",
@@ -21,8 +21,8 @@ const Projects = () => {
       image:
         "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800",
       tags: ["React", "MongoDB", "Node.js", "ethers.js", "GenAI"],
-      github: "#",
-      live: "#",
+      github: "https://github.com/Akcthecoder200/Job-portal",
+      live: "https://job-portal-1-1lr4.onrender.com/",
     },
     {
       title: "Medibot - AI Health Assistant",
@@ -30,8 +30,8 @@ const Projects = () => {
         " An AI healthcare assistant powered by GenAI and RAG. It provides accurate medical information from a custom knowledge base and supports daily conversations.",
       image: medibotImg,
       tags: ["Python", "GenAI", "LangChain", "Pinecone"],
-      github: "#",
-      live: "#",
+      github: "https://github.com/Akcthecoder200/Medibot",
+      live: "https://medibot-7cqk.vercel.app/",
     },
     // {
     //   title: 'Social Media Dashboard',
