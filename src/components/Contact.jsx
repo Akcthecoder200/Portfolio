@@ -1,55 +1,104 @@
-import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, Instagram, Code, SquareCode } from 'lucide-react';
+import React, { useState } from "react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  Github,
+  Linkedin,
+  Twitter,
+  Instagram,
+  Code,
+  SquareCode,
+} from "lucide-react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    // Reset form
-    setFormData({ name: '', email: '', subject: '', message: '' });
+
+    setFormData({ name: "", email: "", message: "" });
+
+    try {
+      const res = await fetch("https://formcarry.com/s/testpoint", {
+        // Replace with your Formcarry endpoint
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (data.code === 200) {
+        alert("Thank you! I'll get back to you soon.");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        alert(
+          data.message || "Something went wrong. Please try after some time."
+        );
+      }
+    } catch (error) {
+      alert("Network error. Please try again later.");
+    }
   };
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const contactMethods = [
     {
       icon: <Mail className="w-6 h-6" />,
-      title: 'Email',
-      value: 'akchoudhary2411@gmail.com',
-      link: 'mailto:akchoudhary2411@gmail.com'
+      title: "Email",
+      value: "akchoudhary2411@gmail.com",
+      link: "mailto:akchoudhary2411@gmail.com",
     },
     {
       icon: <Phone className="w-6 h-6" />,
-      title: 'Phone',
-      value: '+91 7877200205',
-      link: 'tel:+917877200205'
+      title: "Phone",
+      value: "+91 7877200205",
+      link: "tel:+917877200205",
     },
     {
       icon: <MapPin className="w-6 h-6" />,
-      title: 'Location',
-      value: 'Jalore, Rajasthan',
-      link: '#'
-    }
+      title: "Location",
+      value: "Jalore, Rajasthan",
+      link: "#",
+    },
   ];
 
   const socialLinks = [
-    { icon: <Github className="w-6 h-6" />, name: 'GitHub', url: 'https://github.com/Akcthecoder200' },
-    { icon: <Linkedin className="w-6 h-6" />, name: 'LinkedIn', url: 'https://www.linkedin.com/in/arvindk2' },
-    { icon: <SquareCode className="w-6 h-6" />, name: 'Instagram', url: 'https://leetcode.com/u/cryptic_x/' },
-    { icon: <Instagram className="w-6 h-6" />, name: 'Code', url: 'https://www.instagram.com/arvind_k2' }
+    {
+      icon: <Github className="w-6 h-6" />,
+      name: "GitHub",
+      url: "https://github.com/Akcthecoder200",
+    },
+    {
+      icon: <Linkedin className="w-6 h-6" />,
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/arvindk2",
+    },
+    {
+      icon: <SquareCode className="w-6 h-6" />,
+      name: "Instagram",
+      url: "https://leetcode.com/u/cryptic_x/",
+    },
+    {
+      icon: <Instagram className="w-6 h-6" />,
+      name: "Code",
+      url: "https://www.instagram.com/arvind_k2",
+    },
   ];
 
   return (
@@ -60,8 +109,8 @@ const Contact = () => {
             Let's Work Together
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Have a project in mind? I'd love to hear about it. Send me a message and let's discuss 
-            how we can bring your ideas to life.
+            Have a project in mind? I'd love to hear about it. Send me a message
+            and let's discuss how we can bring your ideas to life.
           </p>
         </div>
 
@@ -71,7 +120,7 @@ const Contact = () => {
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
               Get in Touch
             </h3>
-            
+
             <div className="space-y-6 mb-12">
               {contactMethods.map((method, index) => (
                 <a
@@ -115,7 +164,10 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                  >
                     Your Name
                   </label>
                   <input
@@ -130,7 +182,10 @@ const Contact = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                  >
                     Your Email
                   </label>
                   <input
@@ -145,25 +200,12 @@ const Contact = () => {
                   />
                 </div>
               </div>
-              
+
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-gray-50 dark:bg-slate-800 text-gray-900 dark:text-white transition-colors"
-                  placeholder="Project Discussion"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+                >
                   Message
                 </label>
                 <textarea
@@ -177,7 +219,7 @@ const Contact = () => {
                   placeholder="Tell me about your project..."
                 ></textarea>
               </div>
-              
+
               <button
                 type="submit"
                 className="w-full flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
