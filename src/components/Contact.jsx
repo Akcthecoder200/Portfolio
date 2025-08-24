@@ -25,7 +25,7 @@ const Contact = () => {
     setFormData({ name: "", email: "", message: "" });
 
     try {
-      const res = await fetch("https://formcarry.com/s/testpoint", {
+      const res = await fetch("https://formcarry.com/s/dst1GbT-2c6", {
         // Replace with your Formcarry endpoint
         method: "POST",
         headers: {

@@ -1,31 +1,37 @@
-import React from 'react';
-import { ExternalLink, Github } from 'lucide-react';
+import React from "react";
+import { ExternalLink, Github } from "lucide-react";
+import medibotImg from "../assets/pexels-pixabay-40568.jpg";
+import codesyncImg from "../assets/pexels-goumbik-574071.jpg"; // <-- Import your asset
 
 const Projects = () => {
   const projects = [
     {
-      title: 'CodeSync - Real-Time Code Editor',
-      description: 'A real-time collaborative code editor with instant code sync and multi-language execution. The platform includes a collaborative whiteboard and a robust room management.',
-      image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800',
-      tags: ['React', 'Node.js', 'MongoDB', 'Socket.io', 'tldraw'],
-      github: '#',
-      live: '#'
+      title: "CodeSync - Real-Time Code Editor",
+      description:
+        "A real-time collaborative code editor with instant code sync and multi-language execution. The platform includes a collaborative whiteboard and a robust room management.",
+      image: codesyncImg, // <-- Use local asset here
+      tags: ["React", "Node.js", "MongoDB", "Socket.io", "tldraw"],
+      github: "#",
+      live: "#",
     },
     {
-      title: 'ConnectUs - Networking Platform',
-      description: 'A modern, AI-powered networking platform featuring intelligent job matching, secure blockchain payments, and comprehensive user profiles.',
-      image: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800',
-      tags: ['React', 'MongoDB', 'Node.js', 'ethers.js','GenAI'],
-      github: '#',
-      live: '#'
+      title: "ConnectUs - Networking Platform",
+      description:
+        "A modern, AI-powered networking platform featuring intelligent job matching, secure blockchain payments, and comprehensive user profiles.",
+      image:
+        "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800",
+      tags: ["React", "MongoDB", "Node.js", "ethers.js", "GenAI"],
+      github: "#",
+      live: "#",
     },
     {
-      title: 'Medibot - AI Health Assistant',
-      description: ' An AI healthcare assistant powered by GenAI and RAG. It provides accurate medical information from a custom knowledge base and supports daily conversations.',
-      image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800',
-      tags: ['Python', 'GenAI', 'LangChain', 'Pinecone'],
-      github: '#',
-      live: '#'
+      title: "Medibot - AI Health Assistant",
+      description:
+        " An AI healthcare assistant powered by GenAI and RAG. It provides accurate medical information from a custom knowledge base and supports daily conversations.",
+      image: medibotImg,
+      tags: ["Python", "GenAI", "LangChain", "Pinecone"],
+      github: "#",
+      live: "#",
     },
     // {
     //   title: 'Social Media Dashboard',
@@ -61,8 +67,9 @@ const Projects = () => {
             My Projects
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Here are some of the projects I've worked on. Each one represents a unique challenge 
-            and learning experience that helped me grow as a developer.
+            Here are some of the projects I've worked on. Each one represents a
+            unique challenge and learning experience that helped me grow as a
+            developer.
           </p>
         </div>
 
@@ -73,20 +80,20 @@ const Projects = () => {
               className="group bg-gray-50 dark:bg-slate-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
             >
               <div className="relative overflow-hidden">
-                <img 
-                  src={project.image} 
+                <img
+                  src={project.image}
                   alt={project.title}
                   className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute top-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <a 
+                  <a
                     href={project.github}
                     className="p-2 bg-white/20 backdrop-blur-sm rounded-lg hover:bg-white/30 transition-colors"
                   >
                     <Github className="w-5 h-5 text-white" />
                   </a>
-                  <a 
+                  <a
                     href={project.live}
                     className="p-2 bg-white/20 backdrop-blur-sm rounded-lg hover:bg-white/30 transition-colors"
                   >
@@ -94,7 +101,7 @@ const Projects = () => {
                   </a>
                 </div>
               </div>
-              
+
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                   {project.title}
@@ -102,7 +109,7 @@ const Projects = () => {
                 <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
                   {project.description}
                 </p>
-                
+
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag, tagIndex) => (
                     <span
@@ -119,7 +126,7 @@ const Projects = () => {
         </div>
 
         <div className="text-center mt-12">
-          <a 
+          <a
             href="https://github.com/Akcthecoder200"
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
           >

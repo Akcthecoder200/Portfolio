@@ -1,7 +1,47 @@
-import React from "react";
-import { ChevronDown, Github, Linkedin, Mail } from "lucide-react";
+import React, { useState, useEffect } from "react";
+import {
+  ChevronDown,
+  Github,
+  Linkedin,
+  Mail,
+  DownloadCloud,
+} from "lucide-react";
+import resumePDF from "../assets/personal_resume_2.pdf";
+
+const NAME = "Arvind Kumar";
+const TYPING_SPEED = 120;
+const ERASING_SPEED = 60;
+const DELAY_AFTER_TYPING = 1200;
+const DELAY_AFTER_ERASING = 500;
 
 const Hero = () => {
+  const [displayed, setDisplayed] = useState("");
+  const [isTyping, setIsTyping] = useState(true);
+
+  useEffect(() => {
+    let timeout;
+    if (isTyping) {
+      if (displayed.length < NAME.length) {
+        timeout = setTimeout(
+          () => setDisplayed(NAME.slice(0, displayed.length + 1)),
+          TYPING_SPEED
+        );
+      } else {
+        timeout = setTimeout(() => setIsTyping(false), DELAY_AFTER_TYPING);
+      }
+    } else {
+      if (displayed.length > 0) {
+        timeout = setTimeout(
+          () => setDisplayed(NAME.slice(0, displayed.length - 1)),
+          ERASING_SPEED
+        );
+      } else {
+        timeout = setTimeout(() => setIsTyping(true), DELAY_AFTER_ERASING);
+      }
+    }
+    return () => clearTimeout(timeout);
+  }, [displayed, isTyping]);
+
   const scrollToAbout = () => {
     const aboutSection = document.querySelector("#about");
     if (aboutSection) {
@@ -28,8 +68,14 @@ const Hero = () => {
           <div className="mb-8 animate-fade-in-up">
             <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
               Hi, I'm{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Arvind Kumar
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent min-w-[1ch]">
+                {displayed}
+                {displayed.length > 0 ? (
+                  <span
+                    className="inline-block align-bottom border-r-2 border-blue-600 ml-1 animate-pulse"
+                    style={{ height: "0em", width: "0" }}
+                  />
+                ) : null}
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -38,6 +84,7 @@ const Hero = () => {
             </p>
           </div>
 
+          {/* Updated button section with Download Resume */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 animate-fade-in-up animation-delay-300">
             <button
               onClick={() =>
@@ -59,11 +106,19 @@ const Hero = () => {
             >
               Contact Me
             </button>
+            <a
+              href={resumePDF}
+              download="Arvind_Kumar_Resume.pdf"
+              className="flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 group"
+            >
+              <DownloadCloud className="w-6 h-6 text-white group-hover:text-yellow-300 transition-colors duration-200" />
+               Resume
+            </a>
           </div>
 
           <div className="flex items-center justify-center space-x-6 mb-16 animate-fade-in-up animation-delay-600">
             <a
-               href="https://github.com/Akcthecoder200"
+              href="https://github.com/Akcthecoder200"
               className="p-3 rounded-full bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors"
             >
               <Github className="w-6 h-6 text-gray-700 dark:text-gray-300" />
@@ -95,5 +150,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-
