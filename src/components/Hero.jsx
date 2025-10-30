@@ -6,7 +6,7 @@ import {
   Mail,
   DownloadCloud,
 } from "lucide-react";
-import resumePDF from "../assets/personal_resume_2.pdf";
+import resumePDF from "../assets/updated_personal_resume.pdf";
 
 const NAME = "Arvind Kumar";
 const TYPING_SPEED = 120;

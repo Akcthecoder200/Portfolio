@@ -1,7 +1,10 @@
 import React from "react";
 import { ExternalLink, Github } from "lucide-react";
 import medibotImg from "../assets/pexels-pixabay-40568.jpg";
-import codesyncImg from "../assets/pexels-goumbik-574071.jpg"; // <-- Import your asset
+import codesyncImg from "../assets/pexels-goumbik-574071.jpg";
+import healthx from "../assets/healthx.jpg"; // <-- Import your asset
+import passwordVault from "../assets/password-vault.avif";
+import finboard from "../assets/finboard.jpg" // <-- Import your asset
 
 const Projects = () => {
   const projects = [
@@ -15,6 +18,43 @@ const Projects = () => {
       live: "https://realtime-code-editor-inag.onrender.com/",
     },
     {
+      title: "HealthX - Smart Hospital Management System",
+      description:
+        "A full-stack hospital management platform enabling seamless appointment scheduling, patient record management, and real-time analytics and AI integration.",
+      image: healthx,
+      tags: ["React", "Node.js", "Express", "MongoDB", "JWT"],
+      github: "https://github.com/Akcthecoder200/HealthX",
+      live: "https://healthx-2675.onrender.com/",
+    },
+
+    {
+      title: "Medibot - AI Health Assistant",
+      description:
+        " An AI healthcare assistant powered by GenAI and RAG. It provides accurate medical information from a custom knowledge base and supports daily conversations.",
+      image: medibotImg,
+      tags: ["Python", "GenAI", "LangChain", "Pinecone"],
+      github: "https://github.com/Akcthecoder200/Medibot",
+      live: "https://medibot-7cqk.vercel.app/",
+    },
+    {
+      title: "Password Vault - Secure Password Manager",
+      description:
+        "A modern password management system featuring client-side encryption, secure authentication, and advanced password strength analysis with Argon2id encryption.",
+      image: passwordVault,
+      tags: [
+        "Next.js",
+        "React",
+        "Node.js",
+        "MongoDB",
+        "libsodium",
+        "JWT",
+        "bcrypt",
+      ],
+      github: "https://github.com/Akcthecoder200/Password-Vault",
+      live: "https://password-vault-frontend.onrender.com/",
+    },
+
+    {
       title: "ConnectUs - Networking Platform",
       description:
         "A modern, AI-powered networking platform featuring intelligent job matching, secure blockchain payments, and comprehensive user profiles.",
@@ -25,38 +65,21 @@ const Projects = () => {
       live: "https://job-portal-1-1lr4.onrender.com/",
     },
     {
-      title: "Medibot - AI Health Assistant",
+      title: "FinBoard - Professional Financial Dashboard",
       description:
-        " An AI healthcare assistant powered by GenAI and RAG. It provides accurate medical information from a custom knowledge base and supports daily conversations.",
-      image: medibotImg,
-      tags: ["Python", "GenAI", "LangChain", "Pinecone"],
-      github: "https://github.com/Akcthecoder200/Medibot",
-      live: "https://medibot-7cqk.vercel.app/",
+        "A real-time, customizable financial analytics dashboard, featuring live market data, drag-and-drop widgets, and professional charting tools powered by Alpha Vantage API.",
+      image: finboard,
+      tags: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Redux Toolkit",
+        "Recharts",
+        "Alpha Vantage API",
+      ],
+      github: "https://github.com/Akcthecoder200/FinBoard",
+      live: "https://fin-board-mocha.vercel.app/",
     },
-    // {
-    //   title: 'Social Media Dashboard',
-    //   description: 'A comprehensive social media analytics dashboard with real-time data visualization, engagement metrics, and automated reporting features.',
-    //   image: 'https://images.pexels.com/photos/147413/twitter-facebook-together-exchange-of-information-147413.jpeg?auto=compress&cs=tinysrgb&w=800',
-    //   tags: ['Vue.js', 'D3.js', 'Python', 'PostgreSQL'],
-    //   github: '#',
-    //   live: '#'
-    // },
-    // {
-    //   title: 'Cryptocurrency Tracker',
-    //   description: 'Real-time cryptocurrency tracking application with portfolio management, price alerts, and detailed market analysis.',
-    //   image: 'https://images.pexels.com/photos/844124/pexels-photo-844124.jpeg?auto=compress&cs=tinysrgb&w=800',
-    //   tags: ['React', 'Redux', 'WebSocket', 'Chart.js'],
-    //   github: '#',
-    //   live: '#'
-    // },
-    // {
-    //   title: 'Recipe Sharing Platform',
-    //   description: 'A community-driven recipe sharing platform where users can upload, share, and discover new recipes with ratings and reviews.',
-    //   image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800',
-    //   tags: ['Next.js', 'Prisma', 'PostgreSQL', 'AWS'],
-    //   github: '#',
-    //   live: '#'
-    // }
   ];
 
   return (
